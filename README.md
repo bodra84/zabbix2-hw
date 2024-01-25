@@ -56,7 +56,7 @@ Cкриншот страницы шаблона с названием «Зада
  
 Cкриншот страницы хостов с привязанными шаблонами:
  
-![Скриншот 2](https://github.com/bodra84/zabbix2-hw/blob/main/img/2_1.png)
+![Скриншот 2](https://github.com/bodra84/zabbix2-hw/blob/main/img/3_1.png)
  
  ---
  
