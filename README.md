@@ -139,7 +139,7 @@ my_bash_param $1
 
 ```
 
- ---
+---
 
 ### Задание 7* со звёздочкой
 Доработайте Python-скрипт из лекции, создайте для него UserParameter и прикрепите его к созданному вами ранее шаблону. 
@@ -151,6 +151,38 @@ my_bash_param $1
 - [ ] Прикрепите в файл README.md код скрипта в Git. Приложите в Git скриншот Latest data с результатом работы скрипта на Python, чтобы были видны результаты работы скрипта при отправке в него 1, 2, -ping, а также -simple_print.*
  
  ---
+
+### Решение 7
+
+Cкриншоты с результатом работы скрипта на python:
+
+![Скриншот 7](https://github.com/bodra84/zabbix2-hw/blob/main/img/7_1.png)
+  
+![Скриншот 8](https://github.com/bodra84/zabbix2-hw/blob/main/img/7_2.png)
+  
+Код скрипта на python:
+```
+import sys
+import os
+import re
+import datetime
+
+if (sys.argv[1] == '-ping'):
+    result=os.popen("ping -c 1 " + sys.argv[2]).read()
+    result=re.findall(r"time=(.*) ms", result)
+    print(result[0])
+elif (sys.argv[1] == '-simple_print'):
+    print(sys.argv[2])
+elif (sys.argv[1] == '1'):
+    print("Faiziev Davlat Zufarovich")
+elif (sys.argv[1] == '2'):
+    current_date = datetime.datetime.now()
+    print( current_date.strftime("%d %B %Y"))
+else:
+    print(f"Unknown input: {sys.argv[1]}")
+```
+
+---
 
 ### Задание 8* со звёздочкой
 
